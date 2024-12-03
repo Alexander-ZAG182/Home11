@@ -6,8 +6,8 @@ public class Main {
         checkIsLeapYear(1585);
         checkIsLeapYear(2024);
         System.out.println("Задача 2");
+        defineAppVersion(0, 2014);
         defineAppVersion(1, 2020);
-        defineAppVersion(1, 2024);
         System.out.println("Задача 3");
         System.out.println("Количество дней доставки - " + calcCardDeliveryDays(27));
         System.out.println("Количество дней доставки - " + calcCardDeliveryDays(65));
@@ -33,8 +33,8 @@ public class Main {
             default:
                 clientOsName = "неизвестная OS";
         }
-        int currentYear = LocalDate.now().getYear();
-        if (clientDeviceYear != currentYear) {
+        int yearForVersionCheck = 2015;
+        if (clientDeviceYear < yearForVersionCheck) {
             System.out.println("Для ОС " + clientOsName + " установите облегченную версию");
         } else {
             System.out.println("Для ОС " + clientOsName + " установите обычную версию");
